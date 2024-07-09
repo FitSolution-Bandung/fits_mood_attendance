@@ -1,0 +1,32 @@
+<odoo>
+    <data>
+        <!-- File: views/hr_attendance_view.xml -->
+        <record id="view_hr_attendance_form_inherit" model="ir.ui.view">
+            <field name="name">hr.attendance.form.inherit</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.hr_attendance_view_form"/>
+            <field name="arch" type="xml">
+                <field name="check_out" position="after">
+                    <field name="mood_type" readonly="0"/>
+                </field>
+                <field name="check_in" position="after">
+                    <field name="mood_type_in" readonly="0"/>
+                </field>
+            </field>
+        </record>
+        <record id="view_hr_attendance_tree_inherit" model="ir.ui.view">
+            <field name="name">hr.attendance.tree.inherit</field>
+            <field name="model">hr.attendance</field>
+            <field name="inherit_id" ref="hr_attendance.view_attendance_tree"/>
+            <field name="arch" type="xml">
+                <field name="check_out" position="after">
+                    <field name="mood_type" readonly="0"/>
+                </field>
+                <field name="check_in" position="after">
+                    <field name="mood_type_in" readonly="0"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+.down-arrow::before {
+    content: "▼";
+    display: inline-block;
+    position: absolute;
+    right: 140px;
+    top: 132px;
+    cursor:pointer;
+}
+
+.modal-body .mood-button {
+    display: inline-flex; /* Mengubah tata letak menjadi inline-flex agar horizontal */
+    align-items: center; /* Mengatur agar elemen berada pada garis baseline */
+    margin-right: 10px; /* Menambahkan jarak antar tombol */
+    flex-direction: column; /* Mengatur tata letak elemen di dalam tombol menjadi vertikal */
+    border: none; /* Menghapus garis kotak hitam di luar gambar */
+    background: none; /* Menghapus background gambar */
+}
+
+.modal-body .mood-button img {
+    margin-bottom: 5px; /* Menambahkan jarak antara gambar dan teks */
+}
+
+.modal-body .selected-mood {
+    margin-top: 20px;
+}
+
+.mood-button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent black */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}

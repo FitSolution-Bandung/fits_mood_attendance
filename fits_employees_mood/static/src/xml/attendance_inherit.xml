@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-extend="HrAttendanceMyMainMenu">
+        <t t-jquery="[title='Sign out']" t-operation="replace">
+            <link rel="stylesheet" href="/fits_employees_mood/static/src/css/inherit_attendance.css"/>
+            <div class="modal-body" t-if="checked_in">
+            <!-- Emotikon buttons -->
+            <button class="mood-button" type="button" data-value="senang" data-type="mood_type">
+                <img src="/fits_employees_mood/static/src/image/happy.gif" alt="Senang" style="width: 100px; height: auto;"/>
+                <span class="emoticon-text">Happy</span>
+            </button>
+            <button class="mood-button" type="button" data-value="netral" data-type="mood_type">
+                <img src="/fits_employees_mood/static/src/image/neutral.gif" alt="Netral" style="width: 100px; height: auto;"/>
+                <span class="emoticon-text">Neutral</span>
+            </button>
+            <button class="mood-button" type="button" data-value="sedih" data-type="mood_type">
+                <img src="/fits_employees_mood/static/src/image/sad.gif" alt="Sedih" style="width: 100px; height: auto;"/>
+                <span class="emoticon-text">Sad</span>
+            </button>
+            <h3 class="mt8 mb24" t-if="!checked_in" t-esc="widget.employee.mood_type"/>
+        </div>
+        </t>
+        <t t-jquery="[title='Sign in']" t-operation="replace">
+            <link rel="stylesheet" href="/fits_employees_mood/static/src/css/inherit_attendance.css"/>
+            <div class="modal-body" t-if="!checked_in">
+            <!-- Emotikon buttons -->
+            <button class="mood-button" type="button" data-value="senang" data-type="mood_type_in">
+                <img src="/fits_employees_mood/static/src/image/happy.gif" alt="Senang" style="width: 100px; height: auto;"/>
+                <span class="emoticon-text">Happy</span>
+            </button>
+            <button class="mood-button" type="button" data-value="netral" data-type="mood_type_in">
+                <img src="/fits_employees_mood/static/src/image/neutral.gif" alt="Netral" style="width: 100px; height: auto;"/>
+                <span class="emoticon-text">Neutral</span>
+            </button>
+            <button class="mood-button" type="button" data-value="sedih" data-type="mood_type_in">
+                <img src="/fits_employees_mood/static/src/image/sad.gif" alt="Sedih" style="width: 100px; height: auto;"/>
+                <span class="emoticon-text">Sad</span>
+            </button>
+            <h3 class="mt8 mb24" t-if="!checked_in" t-esc="widget.employee.mood_type_in"/>
+        </div>
+        </t>
+    </t>
+</templates>
+
+
+
+
+

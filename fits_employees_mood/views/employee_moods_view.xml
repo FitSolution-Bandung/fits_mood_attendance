@@ -1,0 +1,40 @@
+<!-- File: views/hr_mood_views.xml -->
+<odoo>
+    <data>
+        <record id="view_hr_mood_tree" model="ir.ui.view">
+            <field name="name">hr.mood.tree</field>
+            <field name="model">hr.mood</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="mood_value"/>
+                    <field name="mood_icon"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_hr_mood_form" model="ir.ui.view">
+            <field name="name">hr.mood.form</field>
+            <field name="model">hr.mood</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                             <field name="mood_value"/>
+                            <field name="mood_icon"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_hr_mood">
+            <field name="name">Employee Moods</field>
+            <field name="res_model">hr.mood</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_hr_mood" name="Employee Moods" parent="hr_attendance.menu_hr_attendance_root"
+                  action="action_hr_mood" sequence="100"/>
+    </data>
+</odoo>

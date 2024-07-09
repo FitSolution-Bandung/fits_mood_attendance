@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+    <data>
+
+        <template id="assets_backend_fits_employees" name="mood_type assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/fits_employees_mood/static/src/js/inherit_attendance.js"/>
+                <link rel="stylesheet" href="/fits_employees_mood/static/src/css/inherit_attendance.css"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>
